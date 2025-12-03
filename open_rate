@@ -1,0 +1,7 @@
+-- Taxa de Open Rate no período inteiro
+SELECT
+    ROUND(
+        (SUM(CASE WHEN visualizadapaciente = TRUE THEN 1 ELSE 0 END)::DECIMAL 
+        / COUNT(*)) * 100, 
+    2) AS open_rate_percent
+FROM public.prescricaomedicamento;

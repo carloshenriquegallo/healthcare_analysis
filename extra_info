@@ -1,0 +1,45 @@
+-- Prescrições por estado do paciente
+SELECT
+    estadopaciente,
+    COUNT(*) AS qtd_prescricoes
+FROM public.prescricaomedicamento
+GROUP BY estadopaciente
+ORDER BY qtd_prescricoes DESC;
+
+-- Pacientes únicos por cidade
+SELECT
+    cidadepaciente,
+    COUNT(DISTINCT idpaciente) AS pacientes_unicos
+FROM public.prescricaomedicamento
+GROUP BY cidadepaciente
+ORDER BY pacientes_unicos DESC;
+
+-- Idade média dos pacientes por sexo
+SELECT
+    sexopaciente,
+    AVG(EXTRACT(YEAR FROM AGE(CURRENT_DATE, nascimentopaciente))) AS idade_media
+FROM public.prescricaomedicamento
+WHERE nascimentopaciente IS NOT NULL
+GROUP BY sexopaciente
+ORDER BY sexopaciente;
+
+-- Top médicos por volume de prescrições
+SELECT
+    idmedico,
+    COUNT(*) AS qtd_prescricoes
+FROM public.prescricaomedicamento
+GROUP BY idmedico
+ORDER BY qtd_prescricoes DESC
+LIMIT 10;
+
+
+-- Medicamentos mais prescritos
+SELECT
+    p.idmedicamento,
+    m.nome,
+    COUNT(*) AS qtd_prescricoes
+FROM public.prescricaomedicamento p
+JOIN public.medicamentos m
+    ON p.idmedicamento = m.idmedicamento
+GROUP BY p.idmedicamento, m.nome
+ORDER BY qtd_prescricoes DESC;

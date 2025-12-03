@@ -1,0 +1,4 @@
+-- Total de pacientes únicos no período inteiro
+SELECT
+    COUNT(DISTINCT idpaciente) AS pacientes_unicos
+FROM public.prescricaomedicamento;
