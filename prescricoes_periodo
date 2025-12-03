@@ -1,0 +1,11 @@
+-- Total de prescrições por especialidade médica (período inteiro)
+SELECT
+    m.especialidade,
+    COUNT(*) AS qtd_prescricoes
+FROM public.prescricaomedicamento p
+JOIN public.medicos m
+    ON p.idmedico = m.idmedico
+GROUP BY
+    m.especialidade
+ORDER BY
+    qtd_prescricoes DESC;
