@@ -1,0 +1,7 @@
+--Quantas prescrições foram emitidas diariamente?
+SELECT
+    dataprescricao AS data,
+    COUNT(DISTINCT idprescricao) AS qtd_prescricoes
+FROM public.prescricaomedicamento
+GROUP BY dataprescricao
+ORDER BY dataprescricao
