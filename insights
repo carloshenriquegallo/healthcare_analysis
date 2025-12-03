@@ -1,0 +1,44 @@
+Insights operacionais possíveis a partir dos dados
+1. Baixa taxa de visualização reduz conversão
+
+Se o open rate estiver muito abaixo do esperado, isso indica que pacientes não estão vendo suas prescrições digitais.
+Ação: melhorar envio de notificações, reforçar SMS/e-mail, revisar UX da área do paciente.
+
+2. Especialidades com baixa conversão podem precisar de suporte adicional
+
+Ao cruzar “especialidade médica” com “taxa de conversão”, é possível identificar especialidades onde os pacientes visualizam, mas não convertem.
+Ação: mapear causas (orientação médica, tipo de medicamento, canal inadequado), criar onboarding específico por especialidade.
+
+3. Canais de venda têm eficiência muito diferente
+
+Se um canal tem open rate alto, mas conversão baixa, há uma fricção na jornada de compra.
+Ação: rever parceiros, renegociar SLAs, ajustar integrações de estoque e entrega.
+
+4. Perfil demográfico impacta adesão
+
+Com dados de idade e sexo, é possível entender quais perfis utilizam mais ou menos o produto.
+Ação: campanhas segmentadas; melhorar usabilidade para públicos menos aderentes.
+
+5. Localidades com alto volume podem guiar expansão
+
+Analisar prescrições por estado/cidade permite identificar onde o produto tem tração.
+Ação: priorizar integrações com farmácias dessas regiões, ampliar rede.
+
+6. Medicamentos mais prescritos geram oportunidades de recomendação e otimização
+
+Medicamentos com alto volume mas baixa conversão indicam problemas no canal ou no preço.
+Ação: priorizar disponibilidade; negociar com parceiros comerciais; criar mensagens de apoio ao paciente.
+
+7. Identificação de gargalos no funil
+
+Como o dataset permite medir:
+
+Prescrições emitidas
+
+Prescrições visualizadas
+
+Vendas
+
+podemos mapear onde estamos perdendo mais usuários no funil.
+
+Ação: concentrar esforços no maior gargalo (visualização ou conversão).
