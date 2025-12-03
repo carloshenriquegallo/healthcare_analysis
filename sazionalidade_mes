@@ -1,0 +1,7 @@
+--Sazonalidade por mês (no período todo)
+SELECT
+    DATE_TRUNC('month', dataprescricao)::date AS mes,
+    COUNT(DISTINCT idprescricao)             AS qtd_prescricoes
+FROM public.prescricaomedicamento
+GROUP BY DATE_TRUNC('month', dataprescricao)
+ORDER BY mes;
