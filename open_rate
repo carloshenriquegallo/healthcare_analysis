@@ -5,3 +5,9 @@ SELECT
         / COUNT(*)) * 100, 
     2) AS open_rate_percent
 FROM public.prescricaomedicamento;
+
+SELECT
+    SUM(CASE WHEN visualizadapaciente = TRUE THEN 1 ELSE 0 END)
+    AS prescricoes_visualizadas_totais
+FROM public.prescricaomedicamento;
+
